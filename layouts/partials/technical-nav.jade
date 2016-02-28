@@ -1,0 +1,11 @@
+extends nav
+block links
+
+  li.uk-nav-header Technicals
+  each technical in collections.technicals
+    if path.href + path.name  == technical.path.href + technical.path.name
+      li.uk-active
+        a(href=technical.path.href+technical.path.name)!= technical.title
+    else
+      li
+        a(href=technical.path.href+technical.path.name)!= technical.title

@@ -1,0 +1,10 @@
+extends nav
+block links
+  li.uk-nav-header Guides
+  each guide in collections.guides
+    if path.href + path.name  == guide.path.href + guide.path.name
+      li.uk-active
+        a(href=guide.path.href+guide.path.name)!= guide.title
+    else
+      li
+        a(href=guide.path.href+guide.path.name)!= guide.title

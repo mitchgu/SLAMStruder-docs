@@ -46,7 +46,7 @@ exports.metalsmith = ->
       directory: '../layouts'))
     .use(permalinks(relative: false))
     .use(redirect(
-      '/guides': '/guides/testguide'
+      '/guides': '/guides/intro'
       '/technicals': '/technicals/testtechnical'
       '/sources': '/sources/testsource'))
 

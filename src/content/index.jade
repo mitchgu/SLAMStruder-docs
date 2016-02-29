@@ -1,0 +1,29 @@
+---
+layout: onecol.jade
+---
+script(src="/assets/uikit/js/components/lightbox.min.js")
+
+mixin icon-link(href, name, icon)
+  .uk-width-1-3
+    a(href=href)
+      .uk-panel.uk-panel-box
+        h3.uk-text-center
+          | #{name}
+        p.uk-text-center
+          i(class="uk-icon-large uk-icon-" + icon)
+
+h1 The SLAMStruder
+.uk-grid.uk-grid-match(data-uk-grid-match="{target:'.uk-panel'}")
+  +icon-link('/guides', "Usage Guides", "file-text-o")
+  +icon-link('/technicals', "Technical Info", "info-circle")
+  +icon-link('/sources', "Sources", "code")
+
+hr
+.uk-grid
+  .uk-width-medium-1-2
+    h3 What is it?
+    <hr>
+    p The SLAMStruder is a 3D printing end effector intended to be mounted to a six axis robotic arm for use in layer-free 3D printing.
+  .uk-width-medium-1-2
+    a(href="/assets/img/general/mounted.jpg", data-uk-lightbox="", title="The SLAMStruder mounted on a KUKA robotic arm")
+      img.uk-responsive-width(src='/assets/img/general/mounted.jpg')

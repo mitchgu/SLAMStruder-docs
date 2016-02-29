@@ -12,6 +12,7 @@ collections = require('metalsmith-collections')
 permalinks = require('metalsmith-permalinks')
 paths = require('metalsmith-paths')
 redirect = require('metalsmith-redirect')
+jade = require('metalsmith-jade')
 
 exports.metalsmith = ->
   metalsmith = Metalsmith(__dirname)
@@ -39,6 +40,7 @@ exports.metalsmith = ->
         pattern: 'sources/*.md'
         sortBy: 'order'))
     .use(markdown())
+    .use(jade())
     .use(layouts(
       engine: 'jade'
       directory: '../layouts'))

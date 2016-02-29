@@ -31,13 +31,13 @@ exports.metalsmith = ->
     .use(paths())
     .use(collections(
       guides:
-        pattern: 'guides/*.md'
+        pattern: 'guide/*.md'
         sortBy: 'order'
-      technicals:
-        pattern: 'technicals/*.md'
+      details:
+        pattern: 'detail/*.md'
         sortBy: 'order'
-      sources:
-        pattern: 'sources/*.md'
+      makes:
+        pattern: 'make/*.md'
         sortBy: 'order'))
     .use(markdown())
     .use(jade())
@@ -46,9 +46,9 @@ exports.metalsmith = ->
       directory: '../layouts'))
     .use(permalinks(relative: false))
     .use(redirect(
-      '/guides': '/guides/intro'
-      '/technicals': '/technicals/testtechnical'
-      '/sources': '/sources/testsource'))
+      '/guides': '/guide/intro'
+      '/make': '/make/intro'
+      '/details': '/detail/intro'))
 
 exports.build = (callback) ->
   exports.metalsmith()

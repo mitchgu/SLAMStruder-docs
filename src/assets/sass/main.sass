@@ -7,7 +7,7 @@
   margin-right: auto
 
 #content
-  padding-top: 30px
+  padding-top: 50px
   padding-bottom: 80px
 
 #footer
@@ -16,13 +16,48 @@
 #twocol
   #sidebar
     width: 300px
-    padding: 20px
+    border-right: 1px solid #AAA
+    background-color: #F6F6F6
   #content
-    padding: 20px
     flex: 1
 
 .overlay-nav figcaption
-    text-transform: uppercase
+  text-transform: uppercase
 
 .icon-link .uk-panel
   padding: 20px 0
+
+#topnav
+  background-color: #444
+  a, .uk-navbar-brand
+    color: #F6F6F6
+    text-shadow: none
+  .uk-navbar-brand
+    margin-top: 2px
+    font-weight: bold
+    margin-right: 10px;
+  .uk-navbar-nav
+    a
+      margin-top: 1px
+      text-transform: uppercase
+      font-weight: bold
+      font-size: 0.9em
+    a:hover
+      background-color: #555
+
+#sidenav
+  padding: 20px 0
+  .uk-nav-header
+    padding: 3px inherit
+    background-color: #DDD
+    border-bottom: 1px solid #777
+    &:not(:first-child)
+      margin-top: 10px
+    &:not(:last-child)
+      margin-bottom: 3px
+
+  li>a:hover
+    text-shadow: none
+
+  li.uk-active>a
+    background-color: rgb(27, 113, 146)

@@ -1,11 +1,13 @@
 extends nav
 block links
 
-  li.uk-nav-header Make the SLAMStruder
-  each make in collections.makes
-    if path.href + path.name  == make.path.href + make.path.name
-      li.uk-active
-        a(href=make.path.href+make.path.name)!= make.title
-    else
-      li
-        a(href=make.path.href+make.path.name)!= make.title
+  each section in collections.makes
+    if section.section != "intro"
+      li.uk-nav-header #{section.section}
+    each make in section
+      if path == make.path
+        li.uk-active
+          a(href="/" + make.path)!= make.title
+      else
+        li
+          a(href="/" + make.path)!= make.title

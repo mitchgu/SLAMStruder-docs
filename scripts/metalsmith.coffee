@@ -10,7 +10,6 @@ moveUp = require('metalsmith-move-up')
 partials = require('metalsmith-register-partials')
 collections = require('metalsmith-collections')
 permalinks = require('metalsmith-permalinks')
-paths = require('metalsmith-paths')
 redirect = require('metalsmith-redirect')
 jade = require('metalsmith-jade')
 
@@ -28,7 +27,6 @@ exports.metalsmith = ->
     .use(cleanCSS(files: '**/*.css'))
     .use(partials(directory: '../layouts/partials'))
     .use(moveUp([ 'content/**/*' ]))
-    .use(paths())
     .use(collections(
       guides:
         pattern: 'guide/*.md'
@@ -37,18 +35,28 @@ exports.metalsmith = ->
         pattern: 'detail/*.md'
         sortBy: 'order'
       makes:
-        pattern: 'make/*.md'
-        sortBy: 'order'))
+        pattern: 'make/:section/*'
+        sortBy: 'order',
+        orderDynamicCollections: [
+          'intro',
+          'hardware',
+          'electronics',
+          'software'
+        ]))
     .use(markdown())
     .use(jade())
+    .use(permalinks(relative: false))
     .use(layouts(
       engine: 'jade'
       directory: '../layouts'))
-    .use(permalinks(relative: false))
     .use(redirect(
       '/guides': '/guide/intro'
-      '/make': '/make/intro'
-      '/details': '/detail/intro'))
+      '/make': '/make/intro/start'
+      '/make/intro': '/make/intro/start'
+      '/make/hardware': '/make/hardware/intro'
+      '/make/electronics': '/make/electronics/intro'
+      '/make/software': '/make/software/intro'
+      '/details': '/detail/overview'))
 
 exports.build = (callback) ->
   exports.metalsmith()

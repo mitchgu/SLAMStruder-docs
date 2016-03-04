@@ -1,9 +1,15 @@
+- css = ['main.css']
+if customCSS
+  each cssFile in customCSS
+    - css.push(cssFile)
+block preamble
+
 doctype html
 html
   head
     include partials/head.jade
 
-  body
+  body(id=bodyID)
     include partials/header.jade
     div#middle
       block middle

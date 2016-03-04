@@ -2,8 +2,7 @@ extends nav
 block links
 
   each section in collections.makes
-    if section.section != "intro"
-      li.uk-nav-header #{section.section}
+    li.uk-nav-header #{section.section.replace('-',' ')}
     each make in section
       if path == make.path
         li.uk-active

@@ -1,13 +1,11 @@
-header
+header#header
   nav#topnav.uk-navbar
     a(href='/').uk-navbar-brand SLAMStruder Docs
     ul.uk-navbar-nav
-      li
-        a(href='/guides') User Guide
-      li
-        a(href='/make') Make
-      li
-        a(href='/details') Technical Details
-      li
-        a(href='#sidebar-offcanvas', data-uk-offcanvas).uk-visible-small
-          i.uk-icon-bars
+      each section in sections
+        li
+          a(href=section.route) #{section.name} #[i(class="uk-icon-" + section.icon)]
+      if twocol
+        li
+          a(href='#sidebar-offcanvas', data-uk-offcanvas).uk-visible-small
+            i.uk-icon-bars

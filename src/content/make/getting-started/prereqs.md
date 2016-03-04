@@ -5,7 +5,7 @@ tagline: Things you'll need
 order: 2
 ---
 
-**Note**: This is not a full bill of materials. See the individual sections for detailed lists.
+<p class="uk-alert uk-alert-warning">**Note**: This is not a full bill of materials. See the individual sections for detailed lists.</p>
 
 ## Fabrication tools
 

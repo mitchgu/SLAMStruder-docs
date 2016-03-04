@@ -1,0 +1,33 @@
+#middle
+  display: flex
+  #sidebar, #content
+    overflow: scroll
+  #sidebar
+    width: 300px
+    border-right: 1px solid #AAA
+    background-color: #F6F6F6
+  #content
+    flex: 1
+  #sidebar-offcanvas
+    li a
+      color: #E0E0E0
+      &:hover
+        background-color: #575757
+
+  .sidebar
+    .sidenav
+      padding: 20px 0
+      .uk-nav-header
+        padding: 3px inherit
+        background-color: #DDD
+        border-bottom: 1px solid #777
+        &:not(:first-child)
+          margin-top: 10px
+        &:not(:last-child)
+          margin-bottom: 3px
+
+      li>a:hover
+        text-shadow: none
+
+      li.uk-active>a
+        background-color: rgb(27, 113, 146)

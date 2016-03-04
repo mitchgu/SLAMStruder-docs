@@ -1,7 +1,11 @@
 extends twocol
 
+block prepreamble
+  - css.push('article.css')
+
 block nav
   include partials/make-nav.jade
 
 block main
   include partials/article.jade
+

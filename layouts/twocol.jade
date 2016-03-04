@@ -1,11 +1,15 @@
 extends base
 
+block preamble
+  - css.push('twocol.css')
+  - twocol = true
+  block prepreamble
+
 block middle
-  #twocol.uk-flex
-    aside#sidebar.uk-hidden-small
+  aside.sidebar#sidebar.uk-hidden-small
+    block nav
+  div#content.uk-container
+    block main
+  aside.sidebar#sidebar-offcanvas.uk-offcanvas
+    .uk-offcanvas-bar
       block nav
-    div#content.uk-container
-      block main
-    aside#sidebar-offcanvas.uk-offcanvas
-      .uk-offcanvas-bar
-        block nav

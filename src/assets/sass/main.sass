@@ -1,65 +1,39 @@
-#onecol
-  max-width: 1000px
+body
+  height: 100vh
+  display: flex
+  flex-direction: column
 
-.guide
-  max-width: 700px
-  margin-left: auto
-  margin-right: auto
+#header
+  #topnav
+    background-color: #373737
+    border-radius: 0
+    a, .uk-navbar-brand
+      color: #E0E0E0
+      text-shadow: none
+    .uk-navbar-brand
+      margin-top: 2px
+      font-weight: bold
+      margin-right: 10px
+    .uk-navbar-nav
+      a
+        margin-top: 1px
+        text-transform: uppercase
+        font-weight: bold
+        font-size: 0.9em
+        i
+          margin-left: 3px
+      a:hover
+        background-color: #555
 
-#content
-  max-width: none
-  padding-top: 50px
-  padding-bottom: 80px
+#middle
+  display: flex
+  flex: 1
+  #content
+    max-width: none
+    padding-top: 50px
+    padding-bottom: 50px
 
 #footer
-  background-color: #444
-
-#twocol
-  #sidebar
-    width: 300px
-    border-right: 1px solid #AAA
-    background-color: #F6F6F6
-  #content
-    flex: 1
-
-.overlay-nav figcaption
-  text-transform: uppercase
-
-.icon-link .uk-panel
-  padding: 20px 0
-
-#topnav
-  background-color: #444
-  border-radius: 0
-  a, .uk-navbar-brand
-    color: #F6F6F6
-    text-shadow: none
-  .uk-navbar-brand
-    margin-top: 2px
-    font-weight: bold
-    margin-right: 10px;
-  .uk-navbar-nav
-    a
-      margin-top: 1px
-      text-transform: uppercase
-      font-weight: bold
-      font-size: 0.9em
-    a:hover
-      background-color: #555
-
-#sidenav
-  padding: 20px 0
-  .uk-nav-header
-    padding: 3px inherit
-    background-color: #DDD
-    border-bottom: 1px solid #777
-    &:not(:first-child)
-      margin-top: 10px
-    &:not(:last-child)
-      margin-bottom: 3px
-
-  li>a:hover
-    text-shadow: none
-
-  li.uk-active>a
-    background-color: rgb(27, 113, 146)
+  background-color: #373737
+  color: #E0E0E0
+  padding: 15px 0

@@ -1,0 +1,78 @@
+source: ../src
+destination: ../build
+metadata:
+  site:
+    title: SLAMStruder Documentation
+    author: Mitchell Gu
+    url: http://slamstruder.mitchgu.com
+    copyright: 2016 Mitchell Gu, Digital Structures
+  sections:
+    -
+      name: User Guide
+      icon: file-text-o
+      route: /guides
+    -
+      name: Make
+      icon: wrench
+      route: /make
+    -
+      name: Technical Details
+      icon: info-circle
+      route: /details
+  featureImages:
+    -
+      src: general/mounted.jpg
+      caption: The SLAMStruder in action
+    -
+      src: general/pretty_lights.jpg
+      caption: The electronics
+    -
+      src: general/pretty_lights.jpg
+      caption: The heated nozzle
+    -
+      src: general/ds.jpg
+      caption: A decorative Digital Structures logo
+sass:
+  outputDir: assets/css/
+ignore:
+  - "**/sass/*.sass"
+  - "**/scss/*.scs"
+cleanCSS:
+  files: "**/*.css"
+partials:
+  directory: ../layouts/partials
+moveUp:
+  - content/**/*
+permalinks:
+  relative: false
+layouts:
+  engine: jade
+  directory: ../layouts
+collections:
+  guides:
+    pattern: guide/*.md
+    sortBy: order
+  makes:
+    pattern: make/:section/*
+    sortBy: order
+    orderDynamicCollections:
+      - getting-started
+      - hardware
+      - electronics
+      - software
+  details:
+    pattern: detail/*.md
+    sortBy: order
+watch:
+  paths:
+    ../src/**/*: true
+    ../layouts/**/*: "**/*.md"
+  livereload: true
+redirects:
+  /guides: /guide/intro
+  /make: /make/getting-started/start
+  /make/getting-started: /make/getting-started/start
+  /make/hardware: /make/hardware/intro
+  /make/electronics: /make/electronics/intro
+  /make/software: /make/software/intro
+  /details: /detail/overview

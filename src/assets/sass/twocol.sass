@@ -1,3 +1,6 @@
+$sidebar-background: white//#F5F5F5
+$active-page-background: rgb(27, 113, 146)
+
 #middle
   display: flex
   #sidebar, #content
@@ -5,17 +8,23 @@
   #sidebar
     width: 300px
     border-right: 1px solid #AAA
-    background-color: #F6F6F6
+    background-color: $sidebar-background
+
   #content
     flex: 1
   #sidebar-offcanvas
-    li a
+    li a, footer
       color: #E0E0E0
       &:hover
         background-color: #575757
 
+  #sidebar, #sidebar-offcanvas .uk-offcanvas-bar
+    display: flex
+    flex-direction: column
+
   .sidebar
     .sidenav
+      flex: 1
       padding: 20px 0
       .uk-nav-header
         padding: 3px inherit
@@ -23,11 +32,9 @@
         border-bottom: 1px solid #777
         &:not(:first-child)
           margin-top: 10px
-        &:not(:last-child)
-          margin-bottom: 3px
 
       li>a:hover
         text-shadow: none
 
       li.uk-active>a
-        background-color: rgb(27, 113, 146)
+        background-color: $active-page-background

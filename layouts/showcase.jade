@@ -4,19 +4,23 @@ block preamble
   - css.push('showcase.css')
 
 block middle
-  .uk-grid
+  .uk-grid.uk-grid-collapse
     .uk-width-large-1-2.uk-width-xlarge-1-3#showcase-left.scrollpane
-      .uk-container
-        h1.uk-margin-bottom The SLAMStruder
-        .uk-grid.uk-grid-match(data-uk-grid-match="{target:'.uk-panel'}")
-          each section in sections
-            +icon-link(section.route, section.name, section.icon)
+      #not-the-footer.uk-container
+        div
+          h1.uk-margin-bottom The SLAMStruder
+          .uk-grid.uk-grid-match(data-uk-grid-match="{target:'.uk-panel'}")
+            each section in sections
+              +icon-link(section.route, section.name, section.icon)
 
-        div#content!= contents
+          div#content!= contents
+
+      include partials/footer.jade
 
     .uk-width-large-1-2.uk-width-xlarge-2-3#showcase-right.scrollpane
       each fi in featureImages
         +feature-image(fi.src, fi.caption)
+
 
 
 mixin icon-link(href, name, icon)

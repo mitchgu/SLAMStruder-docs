@@ -1,6 +1,6 @@
 ---
 title: Overview
-layout: detail.jade
+layout: twocol.jade
 tagline: 
 ---
 

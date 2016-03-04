@@ -1,6 +1,6 @@
 ---
 title: Prerequisites
-layout: make.jade
+layout: twocol.jade
 tagline: Things you'll need
 order: 2
 ---

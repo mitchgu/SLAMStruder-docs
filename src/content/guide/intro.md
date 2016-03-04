@@ -1,6 +1,6 @@
 ---
 title: Introduction
-layout: guide.jade
+layout: twocol.jade
 tagline: Getting to know the SLAMStruder
 ---
 

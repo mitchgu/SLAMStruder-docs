@@ -2,14 +2,18 @@ extends base
 
 block preamble
   - css.push('twocol.css')
+  - css.push('article.css')
   - twocol = true
   block prepreamble
 
 block middle
   aside.sidebar#sidebar.uk-hidden-small
     block nav
+      include partials/nav.jade
   div#content.uk-container
     block main
+      include partials/article.jade
   aside.sidebar#sidebar-offcanvas.uk-offcanvas
     .uk-offcanvas-bar
       block nav
+        include partials/nav.jade

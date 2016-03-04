@@ -1,6 +1,6 @@
 ---
 title: Introduction
-layout: make.jade
+layout: twocol.jade
 tagline: 
 ---
 

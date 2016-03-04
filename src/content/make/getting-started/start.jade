@@ -1,6 +1,6 @@
 ---
 title: Making the SLAMStruder
-layout: make.jade
+layout: twocol.jade
 tagline:
 order: 1
 ---
@@ -12,7 +12,7 @@ style.
 
 mixin overlay-nav(src, href, caption)
   a(href=href)
-    figure.uk-overlay.overlay-nav.uk-overlay-hover.uk-margin-large
+    figure.uk-overlay.overlay-nav.uk-overlay-hover
       img(src="/assets/img/" + src).uk-overlay-fade
       figcaption.uk-overlay-panel.uk-overlay-background.uk-overlay-bottom.uk-ignore.uk-text-bold #{caption} #[i.uk-icon-arrow-right]
 

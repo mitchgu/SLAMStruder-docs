@@ -1,29 +1,35 @@
+$header-background: white//#373737
+$header-background-hover: #EEE//#555
+$header-color: #373737//#E0E0E0
+
 body
   height: 100vh
   display: flex
   flex-direction: column
 
 #header
+  position: relative
+  z-index: 2
   #topnav
-    background-color: #373737
+    //background-color: $header-background
     border-radius: 0
     a, .uk-navbar-brand
-      color: #E0E0E0
+      color: $header-color
       text-shadow: none
     .uk-navbar-brand
-      margin-top: 2px
+      margin-top: 1px
+      margin-bottom: -2px
       font-weight: bold
       margin-right: 10px
     .uk-navbar-nav
       a
-        margin-top: 1px
         text-transform: uppercase
         font-weight: bold
         font-size: 0.9em
         i
           margin-left: 3px
       a:hover
-        background-color: #555
+        background-color: $header-background-hover
 
 #middle
   display: flex
@@ -34,6 +40,4 @@ body
     padding-bottom: 50px
 
 #footer
-  background-color: #373737
-  color: #E0E0E0
   padding: 15px 0

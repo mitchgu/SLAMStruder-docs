@@ -2,6 +2,7 @@
 title: Introduction
 layout: twocol.jade
 tagline: Getting to know the SLAMStruder
+order: 1
 ---
 
 The SLAMStruder is a 3D printing extruder designed for use on six-axis robotic arms. The goal of the SLAMStruder is to enable extrusion of 3D printable plastics in free-air instead of in layers. When paired with a six-axis robotic arm, the SLAMStruder can be used to print pre-programmed, high quality 3D lattices in a layer-free manner.

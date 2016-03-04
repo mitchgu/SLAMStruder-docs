@@ -52,10 +52,10 @@ layouts:
   directory: ../layouts
 collections:
   guides:
-    pattern: guide/*.md
+    pattern: guide/*.*
     sortBy: order
   makes:
-    pattern: make/:section/*
+    pattern: make/:section/*.*
     sortBy: order
     orderDynamicCollections:
       - getting-started
@@ -63,7 +63,7 @@ collections:
       - electronics
       - software
   details:
-    pattern: detail/*.md
+    pattern: detail/*.*
     sortBy: order
 watch:
   paths:

@@ -1,0 +1,36 @@
+---
+title: The 15 Pin D-Sub Connection
+layout: twocol.jade
+order: 10
+---
+
+.uk-grid
+  .uk-width-medium-3-5
+    h2 What is it?
+    hr
+    p The ATI tool changer provides two 15-pin D-sub connectors (one on the robot side and one on the end effector) for completely automatic swapping of end effectors. The D-sub connector is most commonly seen on common VGA video connections, but in this situation it can be used to carry any 15 signals across to the end effector.
+    p For the SLAMStruder to work, we need to connect two digital outputs from the X41 connector on the 4th axis of the arm to the extruder. The easiest and most reliable way to do this is to connect all 10 connections from X41 to the D-sub connector, and use two of the remaining 5 spots to connect an external 24V power supply
+    p This connection can be done quick-and-dirty by connecting only the two digital outputs needed using standard breadboard wire, but a more robust method is to make a cable using 15-core wire and the right connectors.
+    #[strong TODO]: Make the how-to guide on how to make the cable.
+  .uk-width-medium-2-5
+    .uk-panel.uk-panel-box
+      .uk-panel-teaser
+        img(src="/assets/img/dsub/conn.jpg")
+      p ATI's integrated D-sub connector. The pins on the left side connect to corresponding pads on the arm's connector so the two-halves essentially become a male-male adapter
+.uk-grid.uk-grid-match(data-uk-grid-match="{target:'.uk-panel'}")
+  .uk-width-medium-2-5
+    .uk-panel.uk-panel-box
+      .uk-panel-teaser
+        img(src="/assets/img/dsub/x41.png")
+      p The connections provided in X41, from the KUKA reference manual. Only the DO7 and DO8 digital outputs are needed by the SLAMStruder.
+
+  .uk-width-medium-3-5
+    .uk-panel.uk-panel-box
+      .uk-panel-teaser
+        img(src="/assets/img/dsub/x41-conn.jpg")
+      p A corresponding connector for X41. Notice how the two missing pins correspond to X41 connections 11 and 12, which are not connected. There should be only one way to plug this in.
+
+h2 The pin mapping
+hr
+p Here's one way to map X41 pins to D-sub pins that works well. Only D-sub pins 1-10 connect to the X41 connector. The remaining 5 connections can be connected to any external signals. For the SLAMStruder, two of these 5 should be used to connect to an external 24V power supply capable of supplying at least 3 amps of current (to be safe).
+img(src="/assets/img/dsub/pinout.png")

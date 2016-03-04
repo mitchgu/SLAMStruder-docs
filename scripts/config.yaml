@@ -5,7 +5,9 @@ metadata:
     title: SLAMStruder Documentation
     author: Mitchell Gu
     url: http://slamstruder.mitchgu.com
-    copyright: 2016 Mitchell Gu, Digital Structures
+    dsUrl: http://digitalstructures.mit.edu
+    copyright: 2016 Mitchell Gu
+    dsLogo: /assets/img/general/digital-structures-logo-gray.png
   sections:
     -
       name: User Guide

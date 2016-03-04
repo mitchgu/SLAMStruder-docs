@@ -3,19 +3,23 @@
   flex-direction: column
   position: relative
   z-index: 1
-  padding-top: 50px
-  padding-bottom: 50px
   border-right: 1px solid #EEE
   -webkit-box-shadow: 0px 0px 16px 0px rgba(55,55,55,0.75)
   -moz-box-shadow: 0px 0px 16px 0px rgba(55,55,55,0.75)
   box-shadow: 0px 0px 16px 0px rgba(55,55,55,0.75)
-  .icon-link
-    .uk-panel
-      padding: 20px 0
-    a:hover
-      text-decoration: none
   #not-the-footer
+    padding-top: 50px
+    padding-bottom: 50px
     flex: 1
+    .icon-link
+      .uk-panel
+        padding: 20px 0
+      a:hover
+        .uk-panel
+          background-color: #373737
+          i, h3
+            color: #E0E0E0
+        text-decoration: none
 
 #showcase-left, #showcase-right
   overflow: scroll

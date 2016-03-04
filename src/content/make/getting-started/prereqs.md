@@ -1,11 +1,11 @@
 ---
 title: Prerequisites
 layout: twocol.jade
-tagline: Things you'll need
+tagline: 
 order: 2
 ---
 
-<p class="uk-alert uk-alert-warning">**Note**: This is not a full bill of materials. See the individual sections for detailed lists.</p>
+<p class="uk-alert">**Note**: This is not a full bill of materials. See the individual sections for detailed lists.</p>
 
 ## Fabrication tools
 
@@ -21,6 +21,7 @@ order: 2
 
 1. **A 6 DOF robotic arm (KUKA or similar)**. 
  - As of now, SLAMStruder has only been tested with a [KUKA Agilus sixx](http://www.kuka-robotics.com/en/products/industrial_robots/small_robots/kr6_r900_sixx/) robotic arm, but it should be able to be adapted to similar industrial robotic arms. The most important requirements are the ability to connect to two digital outputs from the robot arm and a compatible tool changing system. (see next item)
+ - **TODO**: Determine the required payload limit required from the arm
 2. **[ATI QC11](http://www.ati-ia.com/products/toolchanger/QC.aspx?ID=QC-11) tool changing system (or similar)**
  - Not essential, but handy to have for easy maintenance of the extruder. The SLAMStruder has mounting holes arranged in a 40mm square to be compatible with these tool changers, but this can be customized easily.
 3. **A 24VDC power supply**

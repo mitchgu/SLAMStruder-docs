@@ -6,18 +6,22 @@ order: 1
 ---
 
 style.
-  .overlay-nav figcaption {
+  .thumbnav figcaption {
     text-transform: uppercase;
   }
+  .thumbnav li {
+    margin-top: 0
+  }
 
-mixin overlay-nav(src, href, caption)
-  a(href=href)
-    figure.uk-overlay.overlay-nav.uk-overlay-hover
-      img(src="/assets/img/" + src).uk-overlay-fade
-      figcaption.uk-overlay-panel.uk-overlay-background.uk-overlay-bottom.uk-ignore.uk-text-bold #{caption} #[i.uk-icon-arrow-right]
+mixin thumbnav(src, href, caption)
+  li
+    a(href=href).uk-overlay
+      img(src="/assets/img/" + src)
+      figcaption.uk-overlay-panel.uk-overlay-background.uk-overlay-bottom.uk-text-bold #{caption} #[i.uk-icon-arrow-right]
 
-p Before starting, check out the #[a(href="../prereqs") prerequisites.]
+p.uk-alert Before starting, check out the #[a(href="../prereqs") prerequisites.]
 
-+overlay-nav("hardware/waterjet_a.png", "../../hardware", "1. Make the Hardware")
-+overlay-nav("electronics/pcb_a.png", "../../electronics", "2. Make the Electronics")
-+overlay-nav("software/firmware_a.png", "../../software", "3. Make the Software")
+ul.thumbnav.uk-thumbnav.uk-grid-width-1-1.uk-margin
+  +thumbnav("hardware/waterjet_a.png", "../../hardware", "1. Make the Hardware")
+  +thumbnav("electronics/pcb_a.png", "../../electronics", "2. Make the Electronics")
+  +thumbnav("software/firmware_a.png", "../../software", "3. Make the Software")

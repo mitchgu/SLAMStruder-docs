@@ -14,10 +14,10 @@ mixin overlay-nav(src, href, caption)
   a(href=href)
     figure.uk-overlay.overlay-nav.uk-overlay-hover.uk-margin-large
       img(src="/assets/img/" + src).uk-overlay-fade
-      figcaption.uk-overlay-panel.uk-overlay-background.uk-overlay-bottom.uk-ignore.uk-text-right.uk-text-bold Make the #{caption} #[i.uk-icon-arrow-right]
+      figcaption.uk-overlay-panel.uk-overlay-background.uk-overlay-bottom.uk-ignore.uk-text-bold #{caption} #[i.uk-icon-arrow-right]
 
 p Before starting, check out the #[a(href="../prereqs") prerequisites.]
 
-+overlay-nav("hardware/waterjet_a.png", "../../hardware", "Hardware")
-+overlay-nav("electronics/pcb_a.png", "../../electronics", "Electronics")
-+overlay-nav("software/firmware_a.png", "../../software", "Software")
++overlay-nav("hardware/waterjet_a.png", "../../hardware", "1. Make the Hardware")
++overlay-nav("electronics/pcb_a.png", "../../electronics", "2. Make the Electronics")
++overlay-nav("software/firmware_a.png", "../../software", "3. Make the Software")

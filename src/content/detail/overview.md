@@ -1,5 +1,5 @@
 ---
-title: Technical Specifications
+title: Technical specifications
 layout: twocol.jade
 order: 10
 ---

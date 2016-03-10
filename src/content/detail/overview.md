@@ -1,7 +1,7 @@
 ---
-title: Overview
+title: Technical Specifications
 layout: twocol.jade
-tagline: 
+order: 10
 ---
 
 Overview of technical details
